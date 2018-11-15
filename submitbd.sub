@@ -1,20 +1,20 @@
 #!/bin/bash
-#PBS -q home-mccammon
-#PBS -N glycans
-#PBS -l nodes=1:ppn=3:gpu
-#PBS -l walltime=192:00:00
-#PBS -o glycans_nam_simulation-out.txt
-#PBS -e glycans_nam_simulation-err.txt
-#PBS -V
-#PBS -M cseitz@ucsd.edu
-#PBS -m abe
-#PBS -A mccammon-gpu
+#PBS -q home-mccammon #as a McCammon user, leave this
+#PBS -N glycans #job name
+#PBS -l nodes=1:ppn=3:gpu #use GPUs in multiples of 3, and CPU in multiples of 12
+#PBS -l walltime=192:00:00 #use maximum walltime, if the job ends before the time runs out, the remaining time will be released for other users
+#PBS -o glycans_nam_simulation-out.txt #give any name for the output text file
+#PBS -e glycans_nam_simulation-err.txt #give any name for the error text file
+#PBS -V #leave this blank
+#PBS -M #if you want to receive an email when a job is started and finished, put your email here
+#PBS -m abe #leave this as is
+#PBS -A mccammon-gpu #leave this as is
 
 export MODULEPATH=/projects/builder-group/jpg/modulefiles/applications:$MODULEPATH
-module load browndye
+module load browndye #these two commands must be run to use Browndye in TSCC
 
-RUNDIR=/home/cseitz/run
+INITDIR=/home/cseitz/run #the directory where your run files are
 
-cd $RUNDIR
+cd $INITDIR
 
-nam_simulation 2hty-oseltamivir-simulation.xml
+nam_simulation /home/cseitz/run/2hty-oseltamivir-simulation.xml #the command you would normally use for Browndye
