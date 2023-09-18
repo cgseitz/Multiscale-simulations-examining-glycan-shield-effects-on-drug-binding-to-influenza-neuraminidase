@@ -1,2 +1,2 @@
 # scripts
-Info for the paper "Multiscale simulations examining glycan shield effects on drug binding to influenza neuraminidase" (https://doi.org/10.1016/j.bpj.2020.10.024)
+Info for the paper "Multiscale simulations examining glycan shield effects on drug binding to influenza neuraminidase" (https://doi.org/10.1016/j.bpj.2020.10.024). I have one sample submission script included here. The data collected for this paper, such as Brownian dynamics trajectories, are too large to store on Github and thus are stored here: https://library.ucsd.edu/dc/collection/bb17467984. This collection is freely accessible and can be downloaded by anyone.
